@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+
+<link rel="stylesheet" href="login/css/reset.css" />
+        <link rel="stylesheet" href="login/css/style.css" />
+      
+      <script language="javascript">
+function goto(){
+	var n=document.myform.username.value;
+	var m=document.myform.password.value;
+	if(n!=null&&m!=null){
+		setCookie("name",n);
+		setCookie("ps",m);
+		}
+	}
+	function setCookie(name,value)
+{
+    var Days = 1;
+    var exp = new Date();
+    exp.setTime(exp.getTime() + Days*24*60*60*1000);
+    document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+}function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+
+</script>
+</head>
+
+<body background="images/bg/7.jpg">
+<div class="f">
+<iframe src="index2.html" frameborder="0"  scrolling="no" width="100%" height="45px"></iframe>
+</div>
+<div class="page-container">
+            <h1>登&nbsp;录</h1>
+            <form action="home.html" method="post" onsubmit="goto();" name="myform">
+                <input type="text" name="username" class="username" placeholder="用户名" />
+                <input type="password" name="password" class="password" placeholder="密码" />
+                <button type="submit" >登录</button>
+                <div class="error"><span>+</span></div>
+            </form>
+            <div class="connect">
+                <p>或者：</p>
+                <p>
+                    <a class="weibo" href=""><img src="login/img/weibo.jpg" /></a>
+                    <a class="qq" href=""><img src="login/img/qq.jpg" /></a>
+                </p>
+            </div>
+            <div class="contact">
+            <div id="regisiter"><p><a href="regisiter.html" target="_parent">新用户注册></a></p></div>
+            <div id="forget"><p><a href="forget.html" target="_parent">忘记密码？></a></p></div>
+        </div></div>
+</body>
+</html>

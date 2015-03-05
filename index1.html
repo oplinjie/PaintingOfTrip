@@ -1,0 +1,372 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>旅程画</title>
+<link rel="stylesheet" href="css/index1.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/jquery.imgbox.pack.js"></script>
+<script type=text/javascript src="js/scroll.js"></script>
+
+<script language="javascript">
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+function a(){
+
+	var c = getCookie("name");
+	var b = window.screen.height;
+	document.getElementById("main").style.height=b-100;
+	var b1 = window.screen.width;
+	document.getElementById("section").style.width=b1;
+	document.getElementById("section").style.top=b-100;
+	document.getElementById("lift").style.top=b-200;
+	if(c!=null){
+		document.getElementById("name").innerHTML=c;
+		}else
+		document.getElementById("r2").style.display="none";
+}
+
+</script>
+</head>
+
+<body onLoad="a();" bgcolor="#000000">
+<div class="container-fluid" id="main">
+  <div id="lift"><a href="#lift"><img src="images/lift.png" /></a></div>
+  <div class="row-fluid index navbar-fixed-top">
+    <iframe src="index2.html" frameborder="0"  scrolling="no" width="100%" height="45px"></iframe>
+    <div id="r2" >
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-family: impact, 'Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px;text-transform: uppercase;"><span id="name"></span><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="home.html" target="_parent">我的首页</a></li>
+          <li><a href="linjie.html" target="_parent">个人主页</a></li>
+          <li><a href="publish.html" target="_parent">发布画册</a></li>
+          <li><a href="setup.html" target="_parent">帐号设置</a></li>
+          <li><a href="feedback.html" target="_parent">建议反馈</a></li>
+          <li><a href="logout.html">退出</a></li>
+        </ul>
+      </li>
+    </div>
+  </div>
+  <div class="row-fluid con">
+    <div class="middle" id="title">
+      <h1 class="title" ><img src="images/logo3.png" /></h1>
+      <p class="main">一张照片 一段文字 一个故事</p>
+    </div>
+  </div>
+</div>
+<div class="row-fluid container">
+  <div class="section" id="section"> <a name="lift" ></a>
+    <div class="hot" >
+      <div class="span8 hotspan">
+        <div class="page-header">
+          <h1><small>最新发布<a href="scan.html" class="more">查看更多</a></small> </h1>
+        </div>
+        <ul class="thumbnails">
+          <li class="span5">
+            <div class="a">
+              <div class="caption"><a href="images/hk/s1.JPG" id="hongkong" title="香港——购物天堂"><img alt="300x220" src="images/hk/s1.JPG"/></a> <a href="HongKong.html">香港——购物天堂</a> </div>
+            </div>
+          </li>
+          <li class="span5">
+            <div class="a">
+              <div class="caption"><a href="images/t/s2.jpg" id="dongjing" title="东京——别样风情"><img alt="300x220" src="images/t/2.jpg" /></a> <a href="Tokyo.html">东京——别样风情</a> </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <br>
+      <div class="span4 tuijian">
+        <h1><small>推荐画册</small> </h1>
+        <br>
+        <a href="beijing.html" class="album">北京——不老的城市</a><br>
+        <br>
+        <a href="Rain.html" class="album">你见过那翻雨覆云吗？</a><br>
+        <br>
+        <a href="#" class="album">南京</a><br>
+        <br>
+        <a href="#" class="album">骑行者</a><br>
+        <br>
+        <a href="#" class="album">寻找心中的那一片纯净</a><br>
+        <br>
+        <a href="#" class="album">澳门一日行</a><br>
+      </div>
+    </div>
+    <div class="row-fluid hot1">
+      <div class="demo-wrapper">
+        <div class="page-header">
+          <h1><small>随便看看<a href="scan.html" class="more">查看更多</a></small> </h1>
+        </div>
+        <div id="demo">
+          <div class="col">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s1.jpg" alt="monaco see"> <span class="todos-thumb-span">日出</span> </p>
+            </div>
+          </div>
+          <div class="col col1">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s2.jpg" alt="the flower"> <span class="todos-thumb-span">日落</span> </p>
+            </div>
+          </div>
+          <div class="col col2">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s3.jpg" alt="Chapel Bridge"> <span class="todos-thumb-span">栈道</span> </p>
+            </div>
+          </div>
+          <div class="col col3">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s4.jpg" alt="Luzern sky"> <span class="todos-thumb-span">城堡</span> </p>
+            </div>
+          </div>
+          <div class="col col4">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s5.jpg" alt="Luzern castle"> <span class="todos-thumb-span">森林</span> </p>
+            </div>
+          </div>
+          <div class="col col5">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s6.jpg" alt="Milano hotel's sunflower"> <span class="todos-thumb-span">梯田</span> </p>
+            </div>
+          </div>
+          <div class="col col6">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s7.jpg" alt="i love salzburg"> <span class="todos-thumb-span">海</span> </p>
+            </div>
+          </div>
+          <div class="col col7">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s8.jpg" alt="salzburg castle help"> <span class="todos-thumb-span">乌云</span> </p>
+            </div>
+          </div>
+          <div class="col col8">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s9.jpg" alt="the berchtesgaden sky"> <span class="todos-thumb-span">校园</span> </p>
+            </div>
+          </div>
+          <div class="col col9">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s10.jpg" alt="rose"> <span class="todos-thumb-span">天空</span> </p>
+            </div>
+          </div>
+          <div class="col line">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s11.jpg" alt="berchtesgaden lake"> <span class="todos-thumb-span">花</span> </p>
+            </div>
+          </div>
+          <div class="col line col1">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s12.jpg" alt="bike"> <span class="todos-thumb-span">雪山</span> </p>
+            </div>
+          </div>
+          <div class="col line col2">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s13.jpg" alt="my slipper"> <span class="todos-thumb-span">小路</span> </p>
+            </div>
+          </div>
+          <div class="col line col3">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s14.jpg" alt="Riviera C te d'Azur"> <span class="todos-thumb-span">世界杯</span> </p>
+            </div>
+          </div>
+          <div class="col line col4">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s15.jpg" alt="the small cake"> <span class="todos-thumb-span">雪山</span> </p>
+            </div>
+          </div>
+          <div class="col line col5">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s16.jpg" alt="the runner"> <span class="todos-thumb-span">落幕</span> </p>
+            </div>
+          </div>
+          <div class="col line col6">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s17.jpg" alt="Musée du Louvre Sphinx"> <span class="todos-thumb-span">亮光</span> </p>
+            </div>
+          </div>
+          <div class="col line col7">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s18.jpg" alt="the coffee shop"> <span class="todos-thumb-span">山上</span> </p>
+            </div>
+          </div>
+          <div class="col line col8">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s19.jpg" alt="Musée du Louvre out side's fountain"> <span class="todos-thumb-span">奇异</span> </p>
+            </div>
+          </div>
+          <div class="col line col9">
+            <div class="big todos-thumb">
+              <p><img src="img/loader.gif" data-src="img/s20.jpg" alt="Venus de Milo"> <span class="todos-thumb-span">意境</span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid hot">
+      <div class="address">
+        <div class="page-header">
+          <h1><small>热门地点<a href="track.html" class="more">查看更多</a></small> </h1>
+        </div>
+        <div class="guonei">
+          <h4>国内热门目的地</h4>
+          <ul class="inline">
+            <li><a href="BJprovince.html" target="_blank">北京</a></li>
+            <li><a href="HKprovince.html" target="_blank">香港</a></li>
+            <li><a href="#" target="_blank">上海</a></li>
+            <li><a href="#" target="_blank">拉萨</a></li>
+            <li><a href="#" target="_blank">厦门</a></li>
+            <li><a href="#" target="_blank">广州</a></li>
+            <li><a href="#" target="_blank">杭州</a></li>
+            <li><a href="#" target="_blank">丽江</a></li>
+            <li><a href="#" target="_blank">成都</a></li>
+            <li><a href="#" target="_blank">大理</a></li>
+            <li><a href="#" target="_blank">武汉</a></li>
+            <li><a href="#" target="_blank">西安</a></li>
+            <li><a href="#" target="_blank">苏州</a></li>
+            <li><a href="#" target="_blank">南京</a></li>
+            <li><a href="#" target="_blank">重庆</a></li>
+            <li><a href="#" target="_blank">青岛</a></li>
+            <li><a href="#" target="_blank">青海湖</a></li>
+            <li><a href="#" target="_blank">湘西</a></li>
+            <li><a href="#" target="_blank">泸沽湖</a></li>
+            <li><a href="#" target="_blank">香格里拉</a></li>
+            <li><a href="#" target="_blank">长沙</a></li>
+            <li><a href="#" target="_blank">深圳</a></li>
+            <li><a href="#" target="_blank">三亚</a></li>
+            <li><a href="#" target="_blank">台北</a></li>
+            <li><a href="#" target="_blank">西塘</a></li>
+            <li><a href="#" target="_blank">敦煌</a></li>
+            <li><a href="#" target="_blank">哈尔滨</a></li>
+            <li><a href="#" target="_blank">九寨沟-黄龙</a></li>
+            <li><a href="#" target="_blank">阳朔</a></li>
+            <li><a href="#" target="_blank">澳门</a></li>
+            <li><a href="#" target="_blank">黄山</a></li>
+            <li><a href="#" target="_blank">阿坝州</a></li>
+            <li><a href="#" target="_blank">桂林</a></li>
+            <li><a href="#" target="_blank">甘孜</a></li>
+            <li><a href="#" target="_blank">乌镇</a></li>
+            <li><a href="#" target="_blank">天津</a></li>
+            <li><a href="#" target="_blank">黟县</a></li>
+            <li><a href="#" target="_blank">昆明</a></li>
+            <li><a href="#" target="_blank">林芝</a></li>
+            <li><a href="#" target="_blank">甘南</a></li>
+            <li><a href="#" target="_blank">福州</a></li>
+            <li><a href="#" target="_blank">禾木-喀纳斯</a></li>
+            <li><a href="#" target="_blank">张家界</a></li>
+            <li><a href="#" target="_blank">婺源</a></li>
+            <li><a href="#" target="_blank">济南</a></li>
+            <li><a href="#" target="_blank">大连</a></li>
+          </ul>
+        </div><br>
+        <div class="jingwai">
+          <h4>境外热门目的地</h4>
+          <ul class="inline">
+            <li><a href="#" target="_blank">马尔代夫</a></li>
+            <li><a href="#" target="_blank">新加坡</a></li>
+            <li><a href="#" target="_blank">长滩岛</a></li>
+            <li><a href="#" target="_blank">薄荷岛</a></li>
+            <li><a href="#" target="_blank">巴厘岛</a></li>
+            <li><a href="#" target="_blank">吉隆坡</a></li>
+            <li><a href="#" target="_blank">曼谷</a></li>
+            <li><a href="#" target="_blank">清迈</a></li>
+            <li><a href="#" target="_blank">普吉岛</a></li>
+            <li><a href="#" target="_blank">芭堤雅</a></li>
+            <li><a href="#" target="_blank">苏梅岛</a></li>
+            <li><a href="#" target="_blank">皮皮岛</a></li>
+            <li><a href="#" target="_blank">蒲甘</a></li>
+            <li><a href="#" target="_blank">芽庄</a></li>
+            <li><a href="#" target="_blank">大叻</a></li>
+            <li><a href="#" target="_blank">新德里</a></li>
+            <li><a href="#" target="_blank">斋浦尔</a></li>
+            <li><a href="#" target="_blank">阿格拉</a></li>
+            <li><a href="#" target="_blank">瓦拉纳西</a></li>
+            <li><a href="#" target="_blank">首尔</a></li>
+            <li><a href="#" target="_blank">济州岛</a></li>
+            <li><a href="#" target="_blank">釜山</a></li>
+            <li><a href="#" target="_blank">东京</a></li>
+            <li><a href="#" target="_blank">京都</a></li>
+            <li><a href="#" target="_blank">大阪</a></li>
+            <li><a href="#" target="_blank">北海道</a></li>
+            <li><a href="#" target="_blank">巴塞罗那</a></li>
+            <li><a href="#" target="_blank">马德里</a></li>
+            <li><a href="#" target="_blank">里斯本</a></li>
+            <li><a href="#" target="_blank">罗马</a></li>
+            <li><a href="#" target="_blank">威尼斯</a></li>
+            <li><a href="#" target="_blank">佛罗伦萨</a></li>
+            <li><a href="#" target="_blank">米兰</a></li>
+            <li><a href="#" target="_blank">梵蒂冈</a></li>
+            <li><a href="#" target="_blank">维也纳</a></li>
+            <li><a href="#" target="_blank">莫斯科</a></li>
+            <li><a href="#" target="_blank">巴黎</a></li>
+            <li><a href="#" target="_blank">普罗旺斯</a></li>
+            <li><a href="#" target="_blank">波尔多</a></li>
+            <li><a href="#" target="_blank">琉森</a></li>
+            <li><a href="#" target="_blank">因特拉肯</a></li>
+            <li><a href="#" target="_blank">布拉格</a></li>
+            <li><a href="#" target="_blank">慕尼黑</a></li>
+            <li><a href="#" target="_blank">柏林</a></li>
+            <li><a href="#" target="_blank">阿姆斯特丹</a></li>
+            <li><a href="#" target="_blank">哥本哈根</a></li>
+            <li><a href="#" target="_blank">伦敦</a></li>
+            <li><a href="#" target="_blank">斯德哥尔摩</a></li>
+            <li><a href="#" target="_blank">悉尼</a></li>
+            <li><a href="#" target="_blank">墨尔本</a></li>
+            <li><a href="#" target="_blank">皇后镇</a></li>
+            <li><a href="#" target="_blank">多伦多</a></li>
+            <li><a href="#" target="_blank">纽约</a></li>
+            <li><a href="#" target="_blank">拉斯维加斯</a></li>
+            <li><a href="#" target="_blank">旧金山</a></li>
+            <li><a href="#" target="_blank">芝加哥</a></li>
+            <li><a href="#" target="_blank">洛杉矶</a></li>
+            <li><a href="#" target="_blank">圣保罗</a></li>
+            <li><a href="#" target="_blank">里约热内卢</a></li>
+            <li><a href="#" target="_blank">开罗</a></li>
+            <li><a href="#" target="_blank">卢克索</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.unveil.min.js"></script> 
+<script type="text/javascript">
+$(document).ready(function(){
+	image = new Array(2); 
+　　 image [0] = 'images/bg/bg1.jpg'; 
+　　 image [1] = 'images/bg/bg2.jpg';
+　　 image [2] = 'images/bg/bg3.jpg';
+　　
+　　 number = Math.floor(Math.random() * image.length);
+	$(".container-fluid").css("background-image","url("+image[number]+")");
+	$("#hongkong,#dongjing").imgbox({
+				'speedIn'		: 0,
+				'speedOut'		: 0,
+				'alignment'		: 'center',
+				'overlayShow'	: true,
+				'allowMultiple'	: false
+			});
+			$("#demo .col").mouseenter(function(){
+		$(this).addClass("active");
+		$('.active').siblings().css("opacity", "0.4");
+	});
+	$("#demo .col").mouseleave(function(){
+		$(this).removeClass("active");
+		$("#demo .col").css("opacity", "1");
+	});
+	
+});
+$(function() {
+	$("#demo img").unveil(300);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>古老城市 北京</title>
+<link rel="stylesheet" type="text/css" href="js/vegas/jquery.vegas.css">
+<link rel="stylesheet" type="text/css" href="js/jscrollpane/jquery.jscrollpane.css">
+<link rel="stylesheet" type="text/css" href="css/scanbigpicture.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.easing.js"></script>
+<script src="js/vegas/jquery.vegas.js"></script>
+<script src="js/jscrollpane/jquery.jscrollpane.min.js"></script>
+<script src="js/buzz/buzz.js"></script>
+<script language="javascript">
+$( function() {
+    var pictures = [],
+        $pointer = $( '#pointer' ),
+        $thumbnails = $( '#thumbnails' ),
+        $title = $( '#title' ),
+        $pause = $( '#pause' ),
+        $flash = $( '#flash' ),
+        $volume = $( '#volume' );
+
+    
+
+    buzz.defaults.formats = [ 'ogg', 'mp3' ];
+
+    var trafficSound = new buzz.sound( 'sounds/bigbang - beautiful hangover' ),
+        clickSound = new buzz.sound( 'sounds/click' ),
+        focusSound = new buzz.sound( 'sounds/focus' ),
+        rewindSound = new buzz.sound( 'sounds/rewind' ),
+        cameraSounds = new buzz.group( clickSound, focusSound, rewindSound );
+
+    if ( !buzz.isSupported() ) {
+        $volume.hide();    
+    }
+    
+    trafficSound.loop().play().fadeIn( 5000 );
+    $thumbnails.find( 'ul' ).width( function() {
+        var totalWidth = 0;
+        $( this ).find( 'li' ).each( function() {
+            totalWidth += $( this ).outerWidth( true );
+        });
+        return totalWidth;
+    });
+
+    $thumbnails.jScrollPane();
+
+    var jScrollPaneApi = $thumbnails.data( 'jsp' );
+
+    $( window ).bind( 'resize', function() {
+        jScrollPaneApi.reinitialise();
+    });
+
+
+    $thumbnails.find( 'a' ).each( function() {
+        pictures.push({
+            src: $( this ).attr( 'href' ),    
+            title: $( this ).find( 'img' ).attr( 'title' ),
+            valign: $( this ).find( 'img' ).data( 'valign' )
+        });
+    })
+
+    $.vegas( 'slideshow', { 
+        backgrounds: pictures,
+        delay: 4000
+     })( 'overlay' );
+    
+    $( 'body' ).bind( 'vegasload', function( e, img ) {
+        var src = $( img ).attr( 'src' ),
+            idx = $( 'a[href="' + src + '"]' ).parent( 'li' ).index();
+
+    
+        $title.fadeOut( function() {
+            $( this ).find( 'h1' ).text( pictures[ idx ].title );
+            $( this ).fadeIn();
+        });
+
+        $flash.show().fadeOut( 1000 );
+
+        var pointerPosition = $thumbnails.find( 'li' ).eq( idx ).position().left;
+            
+        $pointer.animate({
+            left: pointerPosition
+        }, 500, 'easeInOutBack' );
+
+        if ( ( pointerPosition > $thumbnails.width() || pointerPosition < jScrollPaneApi.getContentPositionX() ) && !$thumbnails.is( ':hover' ) ) {
+            jScrollPaneApi.scrollToX( pointerPosition, true );
+        }
+
+        $pointer.click( function() {
+            $thumbnails.find( 'a' ).eq( idx ).click()
+        });
+    });
+
+
+    $volume.click( function() {
+        if ( $( this ).hasClass( 'all' ) ) {
+            cameraSounds.unmute();
+            trafficSound.mute();
+        
+            $( this ).removeClass( 'all' ).addClass( 'some' );
+        } else if ( $( this ).hasClass( 'some' ) ) {
+            cameraSounds.mute();
+            trafficSound.mute();
+        
+            $( this ).removeClass( 'some' ).addClass( 'none' );
+        } else {
+            cameraSounds.unmute();
+            trafficSound.unmute();
+        
+            $( this ).removeClass( 'none' ).addClass( 'all' );
+        }
+        return false;
+    });
+
+
+    $thumbnails.find( 'a' ).click( function() {
+        $pause.show();
+        $pointer.hide();
+    
+        $volume.animate( { top: '20px' });
+        $thumbnails.animate( { top: '-90px' });
+        $title.animate( { bottom: '-90px' });    
+
+        var idx = $( this ).parent( 'li' ).index();
+        $.vegas( 'slideshow', { step: idx } )( 'pause' );
+
+    
+        return false;
+    });
+
+    $pause.click( function() {
+        $pause.hide();
+        $pointer.show();
+    
+        $volume.animate( { top:'100px' });
+        $title.animate( { bottom:'0px' });
+        $thumbnails.animate( { top:'0px' });
+
+        $.vegas( 'slideshow' );
+
+
+        return false;
+    });
+});
+</script>
+
+</head>
+
+<body>
+<div id="flash"></div>
+<div id="title">
+  <h1>小学期之行~</h1>
+  <h2>由<a href="linjie.html">Linjie</a>制作&nbsp;&nbsp;&nbsp;&nbsp;<a href="index1.html">回到主页</a></h2>
+  <div class="dianzan"><a href="#">❤</a></div>
+</div>
+<div id="thumbnails">
+  <ul>
+    <li><a href="images/b/1.jpg"><img src="images/b/s1.jpg" title="王府井小吃街 推荐：蝎子" data-valign="top"></a></li>
+    <li><a href="images/b/2.JPG"><img src="images/b/s2.JPG" title="恭王府——和珅" data-valign="bottom"></a></li>
+    <li><a href="images/b/3.JPG"><img src="images/b/s3.JPG" title="王府井"></a></li>
+    <li><a href="images/b/4.JPG"><img src="images/b/s4.JPG" title="北海公园"></a></li>
+    <li><a href="images/b/5.JPG"><img src="images/b/s5.JPG" title="国家大剧院"></a></li>
+    <li><a href="images/b/6.JPG"><img src="images/b/s6.JPG" title="圆明园" data-valign="top"></a></li>
+    <li><a href="images/b/7.jpg"><img src="images/b/s7.jpg" title="南锣鼓巷"></a></li>
+    <li><a href="images/b/8.JPG"><img src="images/b/s8.JPG" title="慕田峪长城" data-valign="top"></a></li>
+  </ul>
+  <div id="pointer"></div>
+</div>
+<div id="pause"><a href="#">继续</a></div>
+<div id="volume" class="all"><a href="#">音乐</a></div>
+</body>
+</html>
