@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>画</title>
+<link rel="stylesheet" href="css/index2.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<script language="javascript">
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+function a(){
+	var c = getCookie("name");
+	
+
+if(c!=null){
+	document.getElementById("r1").style.display="none";
+	}
+		}
+</script>
+</head>
+
+<body onload="a();">
+<div class="container-fluid">
+  <div class="row-fluid navbar-fixed-top">
+    <div class="span121">
+      <div id="logo"><a href="index1.html" target="_parent" ><img src="images/logo2.png" width="150" height="35" title="旅程画" /></a></div>
+      <div id="top-menu">
+        <nav class="mainMenu ">
+          <ul class="block-menu lazy">
+            <li><a class="menu1 three-d lazy" href="scan.html" target="_parent">浏览<span aria-hidden="true" class="three-d-box lazy "> <span class="front lazy ">浏览</span> <span class="back lazy ">浏览</span> </span></a></li>
+            <li><a class="menu2 three-d lazy" href="track.html"  target="_parent">足迹 <span aria-hidden="true" class="three-d-box lazy "> <span class="front lazy ">足迹</span> <span class="back lazy ">足迹</span> </span></a></li>
+            <li><a class="menu3 three-d lazy" href="fm.html" target="_parent">电台 <span aria-hidden="true" class="three-d-box lazy "> <span class="front lazy ">电台</span> <span class="back lazy ">电台</span> </span></a></li>
+            <li><a class="menu4 three-d lazy" href="about.html" target="_parent">关于 <span aria-hidden="true" class="three-d-box lazy "> <span class="front lazy ">关于</span> <span class="back lazy ">关于</span> </span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="btn-groups" id="r1"> <a href="login.html" class="login" target="_parent">登录/注册</a> </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

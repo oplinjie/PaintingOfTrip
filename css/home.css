@@ -1,0 +1,41 @@
+html{
+	filter:Alpha(opacity=5); background:#262626; background: rgba(0, 0, 0, 0.05);}
+body {
+	width:100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font:12px/180% Arial, Helvetica, sans-serif, "新宋体";
+}
+.tabbable{position:absolute;
+	top:100px;
+	width:100%;
+	height:750px;
+	overflow:hidden;
+	left:20px;
+	}
+div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form, fieldset, input, textarea, blockquote {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family:Microsoft YaHei, ​Arial, ​sans-serif;
+}
+.index {
+	position:absolute;
+	top:0px;
+	z-index:-1;
+}
+a, img {
+	border:0;
+	text-decoration:none;
+}
+#r2 {
+	top:20px;
+	width:150px;
+	position:absolute;
+	right:80px;px;
+	float:right;
+	z-index:1045;
+}
+.author{
+	float:right;}

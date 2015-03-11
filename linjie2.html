@@ -1,0 +1,153 @@
+﻿<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Linjie·旅程画</title>
+<link rel="stylesheet" href="css/personal2.css" />
+<script src="js/MooTools.js"></script>
+</head>
+<body onload = "EvaSlider.hide(); st4r.hide();rickSlider.hide();lakiffSlider.hide();prf6Slider.hide();prs7Slider.hide();">
+<div id="container">
+  <div id="start" class="positioning">
+    <div class="inside">
+      <div class="text" style="text-align:center"><a href="index1.html"><img src="images/logo3.png" width="150px" alt="旅程画" /></a>
+        <h1 style="float:right">Linjie</h1>
+      </div>
+      <div class="navigator">
+        <div id="gotowork"><img src="images/button_start.gif" alt="开始！"  title="开始！"/></div>
+      </div>
+    </div>
+  </div>
+  <div id="about" class="positioning">
+    <div class="inside">
+      <div class="header">
+        <h1>关于我></h1>
+      </div>
+      <div class="text"> 我是一名学生！ </div>
+      <div class="navigator">
+        <div id="gotoskills"><img src="images/button_skills.gif" alt="on to my portfolio!" /></div>
+      </div>
+    </div>
+  </div>
+  <div id="work" class="positioning">
+    <div class="inside">
+      <div id="sliderEva" class="slider">
+       </div>
+      <div id="sliderst4r" class="slider">
+       </div>
+      <div id="sliderRick" class="slider">
+        </div>
+      <div id="sliderLakiff" class="slider">
+       </div>
+      <div class="header">我的足迹</div>
+      <div id="evacarein" class="button">
+        <h1>香港&nbsp;&nbsp;</h1>
+      </div>
+      <div id="st4rin" class="button">
+        <h2>澳门&nbsp;&nbsp;</h2>
+      </div>
+      <div id="rickin" class="button">
+        <h1>广州&nbsp;&nbsp;</h1>
+      </div>
+      <div id="lakiffin" class="button">
+        <h2>北京&nbsp;&nbsp;</h2>
+      </div>
+    <div class="navigator">
+      <div id="gotoprint"><img src="images/button_print_design.gif" alt="view  print design" /></div>
+    </div>
+  </div>
+</div>
+<div id="contact" class="positioning">
+  <div class="inside"> <img src="images/title_contact.gif" alt="contact me!" />
+    <div class="header">我的联系方式</div>
+    <div class="text">
+      <p>新浪微博：<a href="#">oplinjie</a><br />
+        微信：<a href="#">oplinjie</a><br />
+        知乎账号：<a href="#">oplinjie</a><br />
+      </p>
+    </div>
+    <div class="navigator">
+      <div id="gotohome"><img src="images/button_home.gif" alt="go back home" /></div>
+    </div>
+  </div>
+</div>
+<div id="print" class="positioning">
+  <div class="inside">
+    <div class="header">我的画册</div>
+    <div class="text">
+      <div id="prf6in" class="button"><img src="images/hk/s1.jpg" width="300px" alt="HK" /></div> 
+      <div id="prs7in" class="button"><img src="images/hk/s5.JPG" width="300px" /></div>
+    </div>
+    <div class="navigator">
+      <div id="gotoabout"><img src="images/button_about.gif" alt="Skillsets" /></div>
+    </div>
+  </div>
+</div>
+<div id="skills" class="positioning">
+  <div class="inside">
+    <div class="header">我的工作</div>
+    <div class="text">
+      <ul id="purple">
+        <li>HTML, CSS</li>
+        <li>jsp</li>
+        <li>MySQL</li>
+        <li>Photoshop</li>
+        <li>日语</li>
+        <li>Flash</li>
+      </ul>
+    </div>
+    <div class="navigator">
+      <div id="gotocontact"><img src="images/button_contact.gif" alt="contact me" /></div>
+    </div>
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+
+	// navigations
+	
+	var skroll = new Fx.Scroll(window, {duration: 1500, wait: false, transition: Fx.Transitions.quadInOut});
+	
+	// website layouts
+	var EvaSlider = new Fx.Slide('sliderEva', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	var st4r = new Fx.Slide('sliderst4r', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	var rickSlider = new Fx.Slide('sliderRick', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	var lakiffSlider = new Fx.Slide('sliderLakiff', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	
+	
+	
+	$('gotohome').addEvent('click', function(){ skroll.toElement('start'); });
+	$('gotoabout').addEvent('click', function(){ skroll.toElement('about'); });
+	$('gotowork').addEvent('click', function(){  skroll.toElement('work'); EvaSlider.hide(); st4r.hide();rickSlider.hide();lakiffSlider.hide();prf6Slider.hide();prs7Slider.hide(); });
+	$('gotocontact').addEvent('click', function(){ skroll.toElement('contact'); });
+	$('gotoprint').addEvent('click', function(){ skroll.toElement('print'); });
+	$('gotoskills').addEvent('click', function(){ skroll.toElement('skills'); });
+	
+	
+
+	$('evacarein').addEvent('click', function(){ st4r.hide();rickSlider.hide(); lakiffSlider.hide();EvaSlider.toggle(); });
+	$('evacareout').addEvent('click', function(){ st4r.hide();rickSlider.hide(); lakiffSlider.hide();EvaSlider.toggle(); });
+	
+	$('st4rin').addEvent('click', function(){ EvaSlider.hide();rickSlider.hide();lakiffSlider.hide();st4r.toggle(); });
+	$('st4rout').addEvent('click', function(){ EvaSlider.hide();rickSlider.hide();lakiffSlider.hide();st4r.toggle(); });
+
+	$('rickin').addEvent('click', function(){ st4r.hide();EvaSlider.hide();lakiffSlider.hide();rickSlider.toggle(); });
+	$('rickout').addEvent('click', function(){ st4r.hide();EvaSlider.hide();lakiffSlider.hide();rickSlider.toggle(); });
+	
+	$('lakiffin').addEvent('click', function(){ st4r.hide();EvaSlider.hide();rickSlider.hide();lakiffSlider.toggle(); });
+	$('lakiffout').addEvent('click', function(){ st4r.hide();EvaSlider.hide();rickSlider.hide();lakiffSlider.toggle(); });
+	
+	//print
+	var prf6Slider = new Fx.Slide('sliderPrf6', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	var prs7Slider = new Fx.Slide('sliderPrs7', {duration: 1000, transition: Fx.Transitions.bounceOut});
+	
+	$('prf6in').addEvent('click', function(){ prf6Slider.toggle();prs7Slider.hide(); });
+	$('prf6out').addEvent('click', function(){ prf6Slider.toggle();prs7Slider.hide(); });
+	
+	$('prs7in').addEvent('click', function(){ prf6Slider.hide();prs7Slider.toggle(); });
+	$('prs7out').addEvent('click', function(){ prf6Slider.hide();prs7Slider.toggle(); });
+	
+	
+</script>
+</body>
+</html>

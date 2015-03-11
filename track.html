@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>足迹·旅程画</title>
+<link rel="stylesheet" href="css/track.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script language="javascript">
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+function a(){
+	var c = getCookie("name");
+
+if(c!=null){
+	document.getElementById("name").innerHTML=c;
+	}else
+	document.getElementById("r2").style.display="none";
+	}
+</script>
+</head>
+
+<body onload="a();">
+<div class="container-fluid">
+  <div class="row-fluid index navbar-fixed-top">
+    <iframe src="index2.html" frameborder="0"  scrolling="no" width="100%" height="45px"></iframe>
+    <div id="r2" >
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-family: impact, 'Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px;text-transform: uppercase;"><span id="name"></span><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="home.html" target="_parent">我的首页</a></li>
+           <li><a href="personal.html" target="_parent">个人主页</a></li>
+          <li><a href="publish.html" target="_parent">发布画册</a></li>
+          <li><a href="setup.html" target="_parent">帐号设置</a></li>
+          <li><a href="feedback.html" target="_parent">建议反馈</a></li>
+          <li><a href="logout.html">退出</a></li>
+        </ul>
+      </li>
+    </div>
+  </div>
+  <div>
+    <dl id="gmap">
+      <dt><a id="title2" href="#nogo"></a></dt>
+      <dd><a id="xj" title="新疆" href="#" target="_blank">新疆</a></dd>
+      <dd><a id="xz" title="西藏" href="#" target="_blank">西藏</a></dd>
+      <dd><a id="qh" title="青海" href="#" target="_blank">青海</a></dd>
+      <dd><a id="gs" title="甘肃" href="#" target="_blank">甘肃</a></dd>
+      <dd><a id="lmg" title="内蒙古" href="#" target="_blank">内蒙古</a></dd>
+      <dd><a id="hlj" title="黑龙江" href="#" target="_blank">黑龙江</a></dd>
+      <dd><a id="jl" title="吉林" href="#" target="_blank">吉林</a></dd>
+      <dd><a id="ln" title="辽宁" href="#" target="_blank">辽宁</a></dd>
+      <dd><a id="sd" title="山东" href="#" target="_blank">山东</a></dd>
+      <dd><a id="hb" title="河北" href="bjprovince.html" target="_blank">河北</a></dd>
+      <dd><a id="sx" title="山西" href="#" target="_blank">山西</a></dd>
+      <dd><a id="bj" title="北京" href="#" target="_blank">北京</a></dd>
+      <dd><a id="tj" title="天津" href="#" target="_blank">天津</a></dd>
+      <dd><a id="shx" title="陕西" href="#" target="_blank">陕西</a></dd>
+      <dd><a id="nx" title="宁夏" href="#" target="_blank">宁夏</a></dd>
+      <dd><a id="hn" title="河南" href="#" target="_blank">河南</a></dd>
+      <dd><a id="js" title="江苏" href="#" target="_blank">江苏</a></dd>
+      <dd><a id="ah" title="安徽" href="#" target="_blank">安徽</a></dd>
+      <dd><a id="sh" title="上海" href="#" target="_blank">上海</a></dd>
+      <dd><a id="zj" title="浙江" href="#" target="_blank">浙江</a></dd>
+      <dd><a id="jx" title="江西" href="#" target="_blank">江西</a></dd>
+      <dd><a id="hj" title="福建" href="#" target="_blank">福建</a></dd>
+      <dd><a id="gd" title="广东" href="#" target="_blank">广东</a></dd>
+      <dd><a id="hl" title="海南" href="#" target="_blank">海南</a></dd>
+      <dd><a id="gx" title="广西" href="#" target="_blank">广西</a></dd>
+      <dd><a id="gz" title="贵州" href="#" target="_blank">贵州</a></dd>
+      <dd><a id="yn" title="云南" href="#" target="_blank">云南</a></dd>
+      <dd><a id="sc" title="四川" href="#" target="_blank">四川</a></dd>
+      <dd><a id="cq" title="重庆" href="#" target="_blank">重庆</a></dd>
+      <dd><a id="hun" title="湖南" href="#" target="_blank">湖南</a></dd>
+      <dd><a id="hub" title="湖北" href="#" target="_blank">湖北</a></dd>
+      <dd><a id="tw" title="台湾" href="#" target="_blank">台湾</a></dd>
+    </dl>
+  </div>
+</div>
+</body>
+</html>

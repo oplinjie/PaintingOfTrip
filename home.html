@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+  <title>首页·旅程画</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap-dropdown.js"></script>
+  <script src="bootstrap/js/bootstrap.js"></script>
+  <script language="javascript">
+  function getCookie(name)
+  {
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+    
+    if(arr=document.cookie.match(reg))
+     
+      return unescape(arr[2]);
+    else
+      return null;
+  } 
+  function a(){
+   var c = getCookie("name");
+
+   if(c!=null){
+     document.getElementById("name").innerHTML=c;
+     document.getElementById("name2").innerHTML=c;
+   }else
+   document.getElementById("r2").style.display="none";
+ }
+ </script>
+</head>
+
+<body onload="a();" bgcolor="#333333">
+  <div class="container-fluid">
+    <div class="row-fluid index navbar-fixed-top">
+      <iframe src="index2.html" frameborder="0"  scrolling="no" width="100%" height="45px"></iframe>
+      <div id="r2" >
+        <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-family: impact, 'Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px;text-transform: uppercase;"><span id="name"></span><b class="caret"></b></a>
+          <ul class="dropdown-menu ">
+            <li><a href="home.html" target="_parent">我的首页</a></li>
+            <li><a href="linjie.html" target="_parent">个人主页</a></li>
+            <li><a href="publish.html" target="_parent">发布画册</a></li>
+            <li><a href="setup.html" target="_parent">帐号设置</a></li>
+            <li><a href="feedback.html" target="_parent">建议反馈</a></li>
+            <li><a href="logout.html">退出</a></li>
+          </ul>
+        </li>
+      </div>
+    </div>
+    <div class="row-fluid part">
+      <div class="span12">
+        <div class="row-fluid">
+          <div class="span8">
+            <div class="tabbable" id="tabs-578187">
+              <ul class="nav nav-tabs">
+                <li class="active"> <a href="#panel-846866" data-toggle="tab">我关注的</a> </li>
+                <li> <a href="#panel-678389" data-toggle="tab">我收藏的</a> </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="panel-846866">
+                  <p>
+                    <ul class="thumbnails">
+                      <li class="span4">
+                        <div class="thumbnail"> <img alt="300x200" src="images/b/s1.JPG" />
+                          <div class="caption">
+                            <h3>北京</h3>
+                            <p>小学期小长假~</p><span class="author" >by<a href="#">***</a></span>
+                            <p> <a class="btn btn-primary" href="beijing.html">浏览</a><a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a></p>
+                            <div id="modal-container-352285" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="myModalLabel">
+                                  分享画册
+                                </h3>
+                              </div>
+                              <div class="modal-body">
+                               <p>
+                                是否登录到微博？
+                              </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button> <button class="btn btn-primary">分享</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="span4">
+                      <div class="thumbnail"> <img alt="300x200" src="images/t/s2.jpg" />
+                        <div class="caption">
+                          <h3> 东京 </h3>
+                          <p>感受不一样的人文风情</p><span class="author" >by<a href="#">***</a></span>
+                          <p> <a class="btn btn-primary" href="#">浏览</a> <a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a></p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="span4">
+                      <div class="thumbnail"> <img alt="300x200" src="images/t/s8.jpg" />
+                        <div class="caption">
+                          <h3>富士山</h3><span class="author" >by<a href="#">***</a></span>
+                          <p> <a class="btn btn-primary" href="#">浏览</a><a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a> </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+              <div class="tab-pane" id="panel-678389">
+                <p>
+                  <ul class="thumbnails">
+                    <li class="span4">
+                      <div class="thumbnail"> <img alt="300x200" src="images/a/s3.jpg" />
+                        <div class="caption">
+                          <h3>高楼风景</h3>
+                          <p>见证大自然的奇迹</p><span class="author" >by<a href="#">***</a></span>
+                          <p> <a class="btn btn-primary" href="#">浏览</a> <a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a> </p>
+                          
+                        </div>
+                      </div>
+                    </li>
+                    <li class="span4">
+                      <div class="thumbnail"> <img alt="300x200" src="images/hk/1.JPG" />
+                        <div class="caption">
+                          <h3> 香港~ </h3>
+                          <p> 感觉非常好 </p><span class="author" >by<a href="#">***</a></span>
+                          <p> <a class="btn btn-primary" href="#">浏览</a> <a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a></p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="span4">
+                      <div class="thumbnail"> <img alt="300x200" src="img/4.jpg" />
+                        <div class="caption">
+                          <h3>古建筑 </h3><span class="author" >by<a href="#">***</a></span>
+                          <p> <a class="btn btn-primary" href="#">浏览</a> <a id="modal-352285" href="#modal-container-352285" role="button" class="btn" data-toggle="modal">分享</a> </p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

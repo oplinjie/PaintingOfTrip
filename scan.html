@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="images/logo.ico" type="image/x-icon" />
+<title>浏览·旅程画</title>
+<link rel="stylesheet" href="css/scan.css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap-dropdown.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script language="javascript">
+function getCookie(name)
+{
+    var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+ 
+    if(arr=document.cookie.match(reg))
+ 
+        return unescape(arr[2]);
+    else
+        return null;
+} 
+function a(){
+	var c = getCookie("name");
+	var a = window.screen.width;
+	var b = window.screen.height;
+	document.getElementById("section").style.top=b-150;
+	document.getElementById("section").style.width=a+100;
+	document.getElementById("focus").style.height=b+45;
+
+if(c!=null){
+	document.getElementById("name").innerHTML=c;
+	}else
+	document.getElementById("r2").style.display="none";
+	}
+</script>
+</head>
+
+<body onload="a();">
+<div class="container-fluid">
+  <div class="row-fluid index navbar-fixed-top">
+    <iframe src="index2.html" frameborder="0"  scrolling="no" width="100%" height="45px"></iframe>
+    <div id="r2" >
+      <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-family: impact, 'Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 15px;text-transform: uppercase;"><span id="name"></span><b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="home.html" target="_parent">我的首页</a></li>          <li><a href="linjie.html" target="_parent">个人主页</a></li>
+
+          <li><a href="publish.html" target="_parent">发布画册</a></li>
+          <li><a href="setup.html" target="_parent">帐号设置</a></li>
+          <li><a href="feedback.html" target="_parent">建议反馈</a></li>
+          <li><a href="logout.html">退出</a></li>
+        </ul>
+      </li>
+    </div>
+  </div>
+  <div class="row-fluid" id="lunbo">
+    <div id="focus">
+      <div class="focusbox">
+        <div class="focusimg">
+          <ul class="fimglist clearfix">
+            <li><a href="beijing.html"><img src="images/b/1.JPG" title="北京"></a></li>
+            <li><a href="Tokyo.html"><img src="images/t/3.JPG" title="日本"></a></li>
+            <li><a href="#"><img src="img/4.jpg" title="古建筑"></a></li>
+            <li><a href="#"><img src="img/5.jpg" title="落叶"></a></li>
+            <li><a href="#"><img src="images/a/2.jpg" title="蓝天"></a></li>
+            <li><a href="#"><img src="images/t/2.jpg" title="街景"></a></li>
+            <li><a href="#"><img src="images/t/7.jpg" title="日本街道"></a></li>
+          </ul>
+        </div>
+        <div class="focustool">
+          <ul class="ftoollist clearfix">
+            <li class="on"><a href="beijing.html"><img src="images/b/s1.JPG">
+              <p class="imgname">北京</p>
+              <p class="imgshortcat">古老城市</p>
+              </a></li>
+            <li><a href="#"><img src="images/t/s3.JPG">
+              <p class="imgname">东京</p>
+              <p class="imgshortcat">不一样的日本</p>
+              </a></li>
+            <li><a href="#"><img src="img/s4.jpg">
+              <p class="imgname">古建筑</p>
+              <p class="imgshortcat">古建筑</p>
+              </a></li>
+            <li><a href="#"><img src="img/s5.jpg">
+              <p class="imgname">落叶飘飘</p>
+              <p class="imgshortcat">黄金时代</p>
+              </a></li>
+            <li><a href="#"><img src="images/a/2.jpg">
+              <p class="imgname">看那蓝天</p>
+              <p class="imgshortcat">总让人心情倍儿爽</p>
+              </a></li>
+            <li><a href="#"><img src="images/t/s2.jpg">
+              <p class="imgname">街景</p>
+              <p class="imgshortcat">好看~</p>
+              </a></li>
+            <li><a href="#"><img src="images/t/s7.jpg">
+              <p class="imgname">日本街道</p>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row-fluid section" id="section"><br />
+    <div class="page-header">
+      <h1><small><strong>画册</strong></small><span class="more">
+        <button class="btn btn-inverse" type="button">热门</button>
+        &nbsp;&nbsp;
+        <button class="btn" type="button">最新</button>
+        </span> </h1>
+    </div>
+    <br />
+    <ul class="clearfix">
+      <li>
+        <div class="photo"><img src="images/n.jpg"  /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a></div>
+      </li>
+      <li>
+        <div class="photo"><img src="images/n2.jpg" /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a></div>
+      </li>
+      <li>
+        <div class="photo"><img src="images/n3.jpg" /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a></div>
+      </li>
+      <li>
+        <div class="photo"><img src="images/n4.jpg" /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a></div>
+      </li>
+      <li>
+        <div class="photo"><img src="images/n5.jpg" /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a> </div>
+      </li>
+      <li>
+        <div class="photo"><img src="images/n6.jpg" /></div>
+        <div class="rsp"></div>
+        <div class="text"><a href="#">
+          <h3>北京故事</h3>
+          </a></div>
+      </li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+
+jQuery.noConflict();
+	jQuery(document).ready(function($){
+		$(".guidelist li").hover(
+			function () {
+				$(this).attr("class", "mouseon");
+			  },
+			  function () {
+				$(this).attr("class", "mouseout");
+			  }
+		);
+		$(".ftoollist li").mouseover(function(){
+			$(this).siblings().removeClass("on");
+			$(this).addClass("on");
+			var preNumber=$(this).prevAll().size();
+			$(".fimglist li").removeClass("onpre");
+			$(".fimglist li:nth-child("+preNumber+")").addClass("onpre");
+			var margin = 990;
+			margin = margin *preNumber; 
+			margin = margin * -1;
+			$(".fimglist").stop().animate({marginLeft: margin + "px"}, {duration: 500});
+		});
+		$(".section ul li .rsp").hide();
+	
+	$(".section	 ul li").hover(function(){
+		$(this).find(".rsp").stop().fadeTo(500,0.5)
+		$(this).find(".text").stop().animate({left:'100'}, {duration: 300})
+	},function(){
+		$(this).find(".rsp").stop().fadeTo(500,0)
+		$(this).find(".text").stop().animate({left:'100'}, {duration: "fast"})
+		$(this).find(".text").animate({left:'300'}, {duration: 0})
+	});
+	});
+</script>
+</body>
+</html>
